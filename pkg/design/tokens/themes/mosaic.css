@@ -1,0 +1,77 @@
+/**
+ * Mindtris Mosaic — base theme = current Cruip Mosaic (default template look)
+ * Gray/violet/sky palette; optimistic, professional SaaS feel.
+ */
+
+:root {
+  --background: #f3f4f6;
+  --foreground: #4b5563;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #111827;
+  --primary-foreground: #f9fafb;
+  --secondary: #ffffff;
+  --secondary-foreground: #1f2937;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #f1eeff;
+  --accent-foreground: #5d47de;
+  --destructive: #ff5656;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #755ff8;
+  --chart-1: #755ff8;
+  --chart-2: #56b1f3;
+  --chart-3: #34bd68;
+  --chart-4: #f0bb33;
+  --chart-5: #ff5656;
+  --radius: 0.5rem;
+  --font-sans: var(--font-inter, "Inter", ui-sans-serif, system-ui, sans-serif);
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1f2937;
+  --sidebar-primary: #111827;
+  --sidebar-primary-foreground: #f9fafb;
+  --sidebar-accent: #f1eeff;
+  --sidebar-accent-foreground: #5d47de;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #111827;
+}
+
+.dark {
+  --background: #111827;
+  --foreground: #9ca3af;
+  --card: #1f2937;
+  --card-foreground: #f3f4f6;
+  --popover: #1f2937;
+  --popover-foreground: #f3f4f6;
+  --primary: #8470ff;
+  --primary-foreground: #ffffff;
+  --secondary: #374151;
+  --secondary-foreground: #f3f4f6;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --accent: #4634b1;
+  --accent-foreground: #f1eeff;
+  --destructive: #ff6467;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #f3f4f6;
+  --chart-1: #8470ff;
+  --chart-2: #67bfff;
+  --chart-3: #3ec972;
+  --chart-4: #f7cd4c;
+  --chart-5: #ff6467;
+  --sidebar: #1f2937;
+  --sidebar-foreground: #f3f4f6;
+  --sidebar-primary: #8470ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #4634b1;
+  --sidebar-accent-foreground: #f1eeff;
+  --sidebar-border: #374151;
+  --sidebar-ring: #f3f4f6;
+}

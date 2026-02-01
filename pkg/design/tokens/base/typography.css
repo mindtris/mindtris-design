@@ -1,0 +1,11 @@
+/**
+ * Design system — typography tokens
+ * App loads fonts (e.g. next/font); base sets --font-sans, --font-mono.
+ * Theme presets can override these for theme-switchable fonts.
+ */
+
+:root {
+  --font-sans: var(--font-inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}

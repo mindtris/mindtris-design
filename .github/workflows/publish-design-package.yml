@@ -1,0 +1,88 @@
+name: Publish @mindtris-design
+
+on:
+  push:
+    branches:
+      - main
+      - simplifi_dev
+    paths:
+      - 'pkg/design/**'
+      - '.github/workflows/publish-design-package.yml'
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Version bump type (patch, minor, major)'
+        required: false
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        working-directory: ./pkg/design
+        run: pnpm install --frozen-lockfile
+
+      - name: Bump version (if workflow_dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        working-directory: ./pkg/design
+        run: |
+          npm version ${{ github.event.inputs.version_bump }} --no-git-tag-version
+
+      - name: Read package version
+        id: package-version
+        working-directory: ./pkg/design
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Publish to GitHub Packages
+        working-directory: ./pkg/design
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm publish
+
+      - name: Create Git tag (if version changed)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "design-v${{ steps.package-version.outputs.version }}" || true
+          git push origin "design-v${{ steps.package-version.outputs.version }}" || true

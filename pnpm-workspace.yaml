@@ -1,0 +1,11 @@
+packages:
+  - '.'
+  - 'pkg/*'
+  # Docusaurus docs package removed
+
+# Allow specific dependency build scripts (pnpm v10+).
+onlyBuiltDependencies:
+  - core-js-pure
+  - esbuild
+  - sharp
+

@@ -1,0 +1,76 @@
+/**
+ * Mindtris Simplifi — Deel-inspired
+ * Light background: #f7f5f2
+ * Primary buttons: #1b1b1b (gray/near-black)
+ * Violet used as accent/highlight: #c4b1f9 / #a98df6
+ */
+
+:root {
+  --background: #f7f5f2;
+  --foreground: #1b1b1b;
+  --card: #ffffff;
+  --card-foreground: #1b1b1b;
+  --popover: #ffffff;
+  --popover-foreground: #1b1b1b;
+  --primary: #1b1b1b;
+  --primary-foreground: #ffffff;
+  --secondary: #dedede;
+  --secondary-foreground: #1b1b1b;
+  --muted: #dedede;
+  --muted-foreground: #616161;
+  --accent: #c4b1f9;
+  --accent-foreground: #1b1b1b;
+  --destructive: #ea4335;
+  --destructive-foreground: #ffffff;
+  --border: #dedede;
+  --input: #dedede;
+  --ring: #1b1b1b;
+  --chart-1: #4285f4;
+  --chart-2: #34a853;
+  --chart-3: #fbbc04;
+  --chart-4: #ea4335;
+  --chart-5: #a98df6;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1b1b1b;
+  --sidebar-primary: #1b1b1b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #c4b1f9;
+  --sidebar-accent-foreground: #1b1b1b;
+  --sidebar-border: #dedede;
+  --sidebar-ring: #1b1b1b;
+}
+
+.dark {
+  --background: #1b1b1b;
+  --foreground: #ffffff;
+  --card: #000000;
+  --card-foreground: #ffffff;
+  --popover: #000000;
+  --popover-foreground: #ffffff;
+  --primary: #dedede;
+  --primary-foreground: #1b1b1b;
+  --secondary: #616161;
+  --secondary-foreground: #ffffff;
+  --muted: #616161;
+  --muted-foreground: #dedede;
+  --accent: #a98df6;
+  --accent-foreground: #1b1b1b;
+  --destructive: #ea4335;
+  --destructive-foreground: #ffffff;
+  --border: #616161;
+  --input: #616161;
+  --ring: #dedede;
+  --chart-1: #4285f4;
+  --chart-2: #34a853;
+  --chart-3: #fbbc04;
+  --chart-4: #ea4335;
+  --chart-5: #a98df6;
+  --sidebar: #1b1b1b;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #dedede;
+  --sidebar-primary-foreground: #1b1b1b;
+  --sidebar-accent: #616161;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #616161;
+  --sidebar-ring: #dedede;
+}

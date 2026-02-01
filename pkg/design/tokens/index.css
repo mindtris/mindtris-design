@@ -1,0 +1,12 @@
+/**
+ * Design system tokens — single entrypoint
+ * Imports base tokens + default theme.
+ * Consuming apps: @import this file in root CSS.
+ */
+
+@import './base/colors.css';
+@import './base/typography.css';
+@import './base/radii.css';
+@import './base/shadows.css';
+@import './base/animations.css';
+@import './themes/default.css';

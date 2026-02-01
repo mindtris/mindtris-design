@@ -1,0 +1,47 @@
+{
+  "name": "@mindtris/design-system",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Mindtris Design System - Components, themes, and tokens",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "files": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.css",
+    "!**/*.test.ts",
+    "!**/*.test.tsx",
+    "!node_modules"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_ORG/mindtris-template.git",
+    "directory": "pkg/design"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {},
+  "exports": {
+    ".": "./index.ts",
+    "./tokens": "./tokens/index.css",
+    "./tokens/*": "./tokens/*.css"
+  },
+  "peerDependencies": {
+    "@headlessui/react": "*",
+    "@radix-ui/react-popover": "*",
+    "clsx": "*",
+    "lucide-react": "*",
+    "next": "*",
+    "next-themes": "*",
+    "react": "*",
+    "react-day-picker": "*",
+    "react-dom": "*",
+    "tailwind-merge": "*"
+  },
+  "devDependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.1",
+    "typescript": "^5.7.3"
+  }
+}
