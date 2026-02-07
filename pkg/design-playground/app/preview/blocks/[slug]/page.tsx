@@ -7,7 +7,11 @@ export function generateStaticParams() {
     ]
 }
 
-export default function BlockPreviewPage({ params }: { params: { slug: string } }) {
-    const { slug } = params
+export default async function BlockPreviewPage({
+    params,
+}: {
+    params: Promise<{ slug: string }>
+}) {
+    const { slug } = await params
     return <BlockPreviewClient slug={slug} />
 }
