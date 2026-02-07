@@ -10,7 +10,7 @@
 
 import * as React from 'react'
 import Image from 'next/image'
-import { CircleCheck, ChevronDown, X } from 'lucide-react'
+import { Check, CircleCheck, ChevronDown, X } from 'lucide-react'
 import { cn } from '../../lib/utils'
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu'
@@ -204,7 +204,7 @@ export function ClassicDropdown<T extends string = string>({
             {selected?.leadingIcon ? <span className="shrink-0">{selected.leadingIcon}</span> : null}
             <span>{selected?.label}</span>
           </span>
-          <ChevronDownIcon className="shrink-0 ml-2 text-muted-foreground" />
+          <ChevronDown className="h-4 w-4 shrink-0 ml-2 text-muted-foreground" aria-hidden />
         </button>
       </PopoverTrigger>
 
@@ -450,7 +450,7 @@ export function DropdownMenuCheckboxItem({ className, children, checked, ...prop
     >
       <span className="pointer-events-none absolute left-2.5 flex h-4 w-4 items-center justify-center">
         <DropdownMenuPrimitive.ItemIndicator>
-          <CheckIcon className="text-primary" />
+          <Check className="text-primary" />
         </DropdownMenuPrimitive.ItemIndicator>
       </span>
       {children}
@@ -517,7 +517,7 @@ export function DropdownMenuSubTrigger({ className, inset, children, ...props }:
     >
       {children}
       <span className="ml-auto text-muted-foreground" aria-hidden>
-        <ChevronDownIcon className="-rotate-90" />
+        <ChevronDown className="h-4 w-4 -rotate-90" aria-hidden />
       </span>
     </DropdownMenuPrimitive.SubTrigger>
   )

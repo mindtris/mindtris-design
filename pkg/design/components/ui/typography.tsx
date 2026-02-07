@@ -65,7 +65,7 @@ export function Heading({
   as,
   ...props
 }: HeadingProps & { as?: React.ElementType }) {
-  const Tag = as ?? (`h${level}` as keyof JSX.IntrinsicElements)
+  const Tag = as ?? (`h${level}` as keyof React.JSX.IntrinsicElements)
   return (
     <Tag
       data-slot="heading"
