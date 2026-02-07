@@ -338,8 +338,6 @@ function getComponentName(activeTab: string) {
     menubar: 'Menubar',
     'navigation-menu': 'Navigation menu',
     typography: 'Typography',
-    'aspect-ratio': 'Aspect Ratio',
-    kbd: 'Kbd',
     table: 'Table',
     'hover-card': 'Hover card',
     'card-decorator': 'Card decorator',
