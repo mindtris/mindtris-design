@@ -666,6 +666,6 @@ export type { IconSize } from './lib/icon-constants'
 export { Header as SectionHeader } from './components/sections'
 export type { HeaderProps as SectionHeaderProps, HeaderLink } from './components/sections'
 
-// Phase C: design-system layouts
-export { Container, Page, Section, Grid, Stack } from './components/layouts'
-export type { ContainerProps, PageProps, SectionProps, GridProps, StackProps } from './components/layouts'
+// Phase C: design-system layouts (explicit path for bundler resolution from consumers)
+export { Container, Page, Section, Grid, Stack } from './components/layouts/container'
+export type { ContainerProps, PageProps, SectionProps, GridProps, StackProps } from './components/layouts/container'
