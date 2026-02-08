@@ -129,7 +129,7 @@ export type {
 export { ThemeCustomizer, ThemeTab, LayoutTab, ImportModal, ColorsPanel, ColorInput, TypographyPanel, OtherPanel } from './theme-customizer-primitives'
 export type { ThemeCustomizerSection } from './theme-customizer-primitives'
 
-// Phase C: design-system UI components (use in customizer and app)
+// Phase C: design-system UI components (root-level re-export for reliable resolution from consumers' node_modules)
 export {
   AccordionGroup,
   Accordion,
@@ -407,7 +407,7 @@ export {
   Icon,
   createIcon,
   DropdownProfile,
-} from './components/ui'
+} from './ui-primitives'
 export type {
   AccordionGroupProps,
   AccordionGroupItem,
@@ -646,7 +646,7 @@ export type {
   DatePickerProps,
   DatePickerRangeProps,
   ChartConfig,
-} from './components/ui'
+} from './ui-primitives'
 
 // Icon constants
 export {
