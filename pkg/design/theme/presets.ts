@@ -120,8 +120,8 @@ export const themePresets: Record<string, ThemePreset> = ({
       },
     },
   },
-  mosaic: {
-    label: "Mosaic",
+  "mindtris-ui": {
+    label: "Mindtris UI",
     source: "BUILT_IN",
     styles: {
       light: {

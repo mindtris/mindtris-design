@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Header as DesignSystemHeader } from '../../pkg/design'
+import { Header as DesignSystemHeader } from '../../../pkg/design'
 
 import SearchModal from '@/components/search-modal'
 import Notifications from '@/components/dropdown-notifications'

@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useSearchParams } from "next/navigation"
-import { Toaster } from "@mindtris/design-system"
+import { Toaster } from "@mindtris/ui"
 
 type ToastPosition =
   | "top-left"

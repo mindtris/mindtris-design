@@ -9,8 +9,8 @@ This plan turns **mindtris-template** into the single source of truth for a **mo
 
 ## Naming & base theme
 
-- **Theme names**: Use **mindtris-** prefixed names only (e.g. `mindtris-default`, `mindtris-mosaic`, `mindtris-dark`, `mindtris-minimal`). Do not use other product names (Deel, Vercel, Linear, Cruip) as theme identifiers to avoid conflicts and branding confusion.
-- **Base theme**: The **default/base theme** is the **current Cruip Mosaic** look — the existing mindtris-template palette, spacing, and feel. We capture it as tokens and name it e.g. `mindtris-mosaic` or `mindtris-default`; it is the fallback when no other theme is selected.
+- **Theme names**: Use **mindtris-** prefixed names only (e.g. `mindtris-ui`, `mindtris-default`, `mindtris-dark`, `mindtris-minimal`). Do not use other product names (Deel, Vercel, Linear) as theme identifiers to avoid conflicts and branding confusion.
+- **Base theme**: The **default/base theme** is the **current mindtris-ui** look — the existing mindtris-template palette, spacing, and feel. We capture it as tokens and name it e.g. `mindtris-ui` or `mindtris-default`; it is the fallback when no other theme is selected.
 
 ---
 
@@ -24,7 +24,7 @@ Structure the design system as a **self-contained package** inside mindtris-temp
 mindtris-template/
 ├── packages/
 │   └── design-system/                    # Consumable design system package
-│       ├── package.json                 # name: "@mindtris/design-system" or "mindtris-design-system"
+│       ├── package.json                 # name: "@mindtris/ui"
 │       ├── tokens/
 │       │   ├── base/
 │       │   │   ├── colors.css           # Semantic: --primary, --accent, --background, etc. (HSL/OKLCH)
@@ -34,11 +34,11 @@ mindtris-template/
 │       │   │   ├── shadows.css          # --shadow-sm, --shadow-md, --shadow-card
 │       │   │   └── gradients.css        # Optional: --gradient-hero, etc.
 │       │   ├── themes/                  # All theme names: mindtris-* (no other product names)
-│       │   │   ├── mindtris-mosaic.css   # Base = current Cruip Mosaic (default template look)
+│       │   │   ├── mindtris-ui.css       # Base = current mindtris-ui (default template look)
 │       │   │   ├── mindtris-dark.css     # Dark mode overrides (combine with any theme)
 │       │   │   ├── mindtris-minimal.css  # Example alternate preset
 │       │   │   └── mindtris-*.css        # Further presets as needed
-│       │   └── index.css                # @import base/* + default theme (mindtris-mosaic)
+│       │   └── index.css                # @import base/* + default theme (mindtris-ui)
 │       ├── theme/
 │       │   ├── presets.ts               # Named token sets (light/dark) — align with reference customizer
 │       │   ├── theme-data.ts            # ColorTheme[] for dropdown (from presets)
@@ -97,8 +97,8 @@ mindtris-template/
 |------|--------|------|
 | **A1** | Create `pkg/design/` and subfolders: `tokens/base`, `tokens/themes`, `theme`, `components/ui`, `components/sections`, `components/theme-customizer`, `lib`. | ✅ **DONE** |
 | **A2** | Add base token files: `colors.css`, `typography.css`, `radii.css`, `shadows.css` in `tokens/base/`. | ✅ **DONE** |
-| **A3** | Add theme files: `mindtris-mosaic.css` (base = Cruip Mosaic), `mindtris-dark.css` in `tokens/themes/`. | ✅ **DONE** |
-| **A4** | Add `tokens/index.css` that imports base + mindtris-mosaic; include `:root` and `.dark`. | ✅ **DONE** - `:root` and `.dark` blocks included via imports (base/colors.css and themes/mindtris-mosaic.css) |
+| **A3** | Add theme files: `mindtris-ui.css` (base = mindtris-ui), `mindtris-dark.css` in `tokens/themes/`. | ✅ **DONE** |
+| **A4** | Add `tokens/index.css` that imports base + mindtris-ui; include `:root` and `.dark`. | ✅ **DONE** - `:root` and `.dark` blocks included via imports (base/colors.css and themes/mindtris-ui.css) |
 | **A5** | Wire tokens in app: import design-system tokens in `app/css/style.css`. | ✅ **DONE** |
 | **B1** | Port theme engine: types, constants, presets (mindtris-* only), use-theme-manager, apply-theme. | ✅ **DONE** |
 | **B2** | Port ThemeCustomizer UI (index, theme-tab, import-modal) and add internal theme route. | ✅ **DONE** |
@@ -115,9 +115,9 @@ mindtris-template/
    - `colors.css`: semantic vars (`--background`, `--foreground`, `--primary`, `--primary-foreground`, `--accent`, `--muted`, `--border`, `--ring`, `--radius`, etc.) — use same names as reference so customizer applies cleanly.  
    - `typography.css`, `radii.css`, `shadows.css` (and optionally spacing, gradients).
 3. **Add `tokens/themes/`**  
-   - `mindtris-mosaic.css` (base = current Cruip Mosaic), `mindtris-dark.css`, plus optional presets (`mindtris-minimal.css`, etc.). Use only **mindtris-** prefixed names.
+   - `mindtris-ui.css` (base = current mindtris-ui), `mindtris-dark.css`, plus optional presets (`mindtris-minimal.css`, etc.). Use only **mindtris-** prefixed names.
 4. **Add `tokens/index.css`**  
-   - Imports base + default theme (mindtris-mosaic); include `:root` and `.dark` rules.
+   - Imports base + default theme (mindtris-ui); include `:root` and `.dark` rules.
 5. **Wire tokens in mindtris-template app**  
    - In `app/css/style.css`: `@import '../pkg/design/tokens/index.css';` (or equivalent path).  
    - Ensure Tailwind uses these vars (e.g. `background: var(--background)` in globals or via Tailwind config).
@@ -141,7 +141,7 @@ mindtris-template/
    - From `references/shadcn-dashboard-landing-template-main/.../nextjs-version/src/`:
      - `config/theme-data.ts` → `pkg/design/theme/theme-data.ts`
      - `config/theme-customizer-constants.ts` → `pkg/design/theme/constants.ts`
-     - `utils/shadcn-ui-theme-presets.ts` and `utils/tweakcn-theme-presets.ts` → **rename and adapt** into `pkg/design/theme/presets.ts` using **mindtris-** preset names only (e.g. mindtris-mosaic, mindtris-minimal; do not ship third-party preset names as-is).
+     - `utils/shadcn-ui-theme-presets.ts` and `utils/tweakcn-theme-presets.ts` → **rename and adapt** into `pkg/design/theme/presets.ts` using **mindtris-** preset names only (e.g. mindtris-ui, mindtris-minimal; do not ship third-party preset names as-is).
      - `hooks/use-theme-manager.ts` → `pkg/design/theme/use-theme-manager.ts`
      - `types/theme-customizer.ts` & `types/theme.ts` → `pkg/design/theme/types.ts`
    - Implement **apply-theme**: same logic as reference — write preset’s `light`/`dark` object to `document.documentElement.style` (`--*`).

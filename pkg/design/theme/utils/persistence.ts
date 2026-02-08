@@ -4,9 +4,9 @@
  * Follows CONTRIBUTING.md: error handling, defensive programming
  */
 
-const STORAGE_KEY_THEME = 'mindtris-design-theme'
-const STORAGE_KEY_RADIUS = 'mindtris-design-radius'
-const STORAGE_KEY_CUSTOM_THEME = 'mindtris-design-custom-theme'
+const STORAGE_KEY_THEME = 'mindtris-ui-theme'
+const STORAGE_KEY_RADIUS = 'mindtris-ui-radius'
+const STORAGE_KEY_CUSTOM_THEME = 'mindtris-ui-custom-theme'
 
 /**
  * Get stored theme preference

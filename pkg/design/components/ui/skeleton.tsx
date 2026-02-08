@@ -18,7 +18,7 @@
  *   <Skeleton lines={2} className="mt-3" />
  * </div>
  *
- * Reference: shadcn + Cruip (composition patterns).
+ * Reference: shadcn + Mindtris UI (composition patterns).
  */
 
 "use client"

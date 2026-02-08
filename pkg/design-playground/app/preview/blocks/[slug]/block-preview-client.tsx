@@ -3,7 +3,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { HeaderBlock, FooterBlock } from '@mindtris/design-system/blocks'
+import { HeaderBlock, FooterBlock } from '@mindtris/ui'
 
 // Mock Data for Header
 const HEADER_DATA = {

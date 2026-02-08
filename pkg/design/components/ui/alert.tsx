@@ -6,7 +6,7 @@
  * - Tokens-only: semantic token classes only.
  * - Composition: title/description slots, optional icon.
  *
- * Mosaic reference variants we mirror:
+ * Mindtris UI reference variants we mirror:
  * - Banner-like inline alerts (apps can compose dismiss + actions)
  *
  * @author: @mindtris-team

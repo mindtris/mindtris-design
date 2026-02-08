@@ -60,7 +60,7 @@ export function ThemeCustomizer({
 }: ThemeCustomizerProps) {
   const { applyImportedTheme, isDarkMode, resetTheme, applyRadius, setBrandColorsValues, applyTheme } = useThemeManager()
 
-  const [internalTheme, setInternalTheme] = React.useState("mosaic")
+  const [internalTheme, setInternalTheme] = React.useState("mindtris-ui")
   const selectedTheme = selectedThemeProp ?? internalTheme
   const setSelectedTheme = setSelectedThemeProp ?? setInternalTheme
   const [selectedRadius, setSelectedRadius] = React.useState("0.5rem")
@@ -69,7 +69,7 @@ export function ThemeCustomizer({
 
   const handleReset = () => {
     // Complete reset to application defaults
-    setSelectedTheme("mosaic")
+    setSelectedTheme("mindtris-ui")
     setSelectedRadius("0.5rem")
     setImportedTheme(null)
     setBrandColorsValues({})

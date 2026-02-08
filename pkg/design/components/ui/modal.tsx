@@ -6,7 +6,7 @@
  * - Tokens-only: semantic token classes only.
  * - A11y: built on Radix Dialog primitives.
  *
- * Mosaic reference variants we mirror:
+ * mindtris-ui reference variants we mirror:
  * - Basic modal shell (title/body/footer)
  * - Scrollable body with sticky-ish footer (handled via className hooks)
  *

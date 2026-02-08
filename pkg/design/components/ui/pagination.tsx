@@ -6,7 +6,7 @@
  * - Tokens-only: semantic token classes only.
  * - A11y: uses nav/aria-label and current page semantics.
  *
- * Mosaic reference variants we mirror:
+ * Mindtris UI reference variants we mirror:
  * - Numeric pager with ellipsis
  * - Classic prev/next with a results summary (apps can render the summary)
  *

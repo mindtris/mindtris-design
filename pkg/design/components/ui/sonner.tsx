@@ -55,7 +55,7 @@ export function Toaster(props: ToasterProps) {
           // Solid (filled)
           // Sonner defines its own defaults for these vars with fairly high specificity.
           // Use `!` so token values always win.
-          // In solid style, border should be visually minimal (match Mosaic-style solid toasts).
+          // In solid style, border should be visually minimal (match Mindtris UI solid toasts).
           "![--success-bg:var(--success,var(--chart-2,var(--accent)))] ![--success-text:var(--primary-foreground)] ![--success-border:transparent]",
           "![--info-bg:var(--primary)] ![--info-text:var(--primary-foreground)] ![--info-border:transparent]",
           "![--warning-bg:var(--warning,var(--chart-3,var(--secondary)))] ![--warning-text:var(--primary-foreground)] ![--warning-border:transparent]",
@@ -91,9 +91,9 @@ export function Toaster(props: ToasterProps) {
       // Trim offset and spacing unless explicitly overridden.
       offset={offset ?? 8}
       mobileOffset={mobileOffset ?? 8}
-      // Mosaic guideline: ~0.75rem between toasts.
+      // Mindtris UI guideline: ~0.75rem between toasts.
       gap={gap ?? 12}
-      // Mosaic guideline: max 3 visible toasts.
+      // Mindtris UI guideline: max 3 visible toasts.
       visibleToasts={visibleToasts ?? 3}
       closeButton={closeButton}
       icons={{
@@ -119,26 +119,26 @@ export function Toaster(props: ToasterProps) {
             'border shadow-lg rounded-xl',
             // Typography (use app font; readable sizing)
             'font-inherit',
-            // Mosaic-like density (comfortable, not oversized).
+            // Mindtris UI density (comfortable, not oversized).
             'text-sm font-normal leading-5',
             // Sonner renders title/description with data-attrs in the DOM.
             // Title should read as a label; description stays normal.
             '[&_[data-title]]:font-medium [&_[data-description]]:font-normal',
             // Spacing
-            // Trim top/bottom padding (match Mosaic toast density).
+            // Trim top/bottom padding (match Mindtris UI toast density).
             '!px-3 !py-2',
             // Layout
             'items-start gap-3',
             // Close button is inline (in-flow), no extra padding needed.
           ),
           // Keep toast text lightweight (avoid “thick” feel).
-          // Match Mosaic notifications: title reads as a label with a small bottom gap.
+          // Match Mindtris UI notifications: title reads as a label with a small bottom gap.
           title: 'font-inherit text-sm font-medium leading-5 text-foreground mb-1',
-          // Match Mosaic notifications: body copy uses regular sizing and muted tone.
+          // Match Mindtris UI notifications: body copy uses regular sizing and muted tone.
           description: 'font-inherit text-sm font-normal leading-5 text-muted-foreground',
           // Let title's `mb-1` control spacing (no extra gap).
           content: 'gap-0',
-          // Match Mosaic guidance: icons can be hidden on mobile when needed.
+          // Match Mindtris UI guidance: icons can be hidden on mobile when needed.
           icon: 'hidden sm:inline-flex',
           // Close button: inline on the right (not floating).
           closeButton: cn(

@@ -3,8 +3,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import { Button, Input } from '@mindtris/design-system'
-import { HeaderBlock, FooterBlock } from '@mindtris/design-system/blocks'
+import { Button, Input, HeaderBlock, FooterBlock } from '@mindtris/ui'
 
 type NavItem = { id: string; label: string }
 

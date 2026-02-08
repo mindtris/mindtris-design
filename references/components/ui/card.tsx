@@ -9,5 +9,5 @@ export {
   CardDescription,
   CardContent,
   CardFooter,
-} from '../../pkg/design'
-export type { CardProps } from '../../pkg/design'
+} from '../../../pkg/design'
+export type { CardProps } from '../../../pkg/design'

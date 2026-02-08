@@ -6,7 +6,7 @@
  * - Tokens-only: no Tailwind palette colors; use semantic token classes only.
  * - Composition: optional `leadingIcon` slot; content via children.
  *
- * Mosaic reference variants we mirror:
+ * mindtris-ui reference variants we mirror:
  * - Small + large pills
  * - Pills with an icon
  * - Compact “chart delta” pills

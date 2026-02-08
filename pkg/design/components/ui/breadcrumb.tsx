@@ -6,7 +6,7 @@
  * - Tokens-only: no Tailwind palette colors; use semantic token classes only.
  * - A11y: renders `<nav aria-label="Breadcrumb">`.
  *
- * Mosaic reference variants we mirror:
+ * Mindtris UI reference variants we mirror:
  * - Separators: slash, dot, chevron
  *
  * @author: @mindtris-team

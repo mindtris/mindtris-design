@@ -15,7 +15,7 @@ import {
   ImportModal,
   useThemeManager,
   type ImportedTheme,
-} from '@mindtris/design-system'
+} from '@mindtris/ui'
 import { usePlayground } from '../playground-shell'
 
 type TabId = 'colors' | 'typography' | 'others'

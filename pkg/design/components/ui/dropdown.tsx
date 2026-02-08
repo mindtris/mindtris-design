@@ -146,7 +146,7 @@ export function DropdownSelect<T extends string = string>({
 /**
  * ClassicDropdown
  * Matches `app/(alternative)/components-library/dropdown` classic style (date-select.tsx).
- * Uses @headlessui/react Menu (not Popover) for exact mosaic behavior.
+ * Uses @headlessui/react Menu (not Popover) for exact mindtris-ui behavior.
  * Token-driven (no hardcoded grays).
  */
 export interface ClassicDropdownProps<T extends string = string> {
@@ -188,7 +188,7 @@ export function ClassicDropdown<T extends string = string>({
           type="button"
           aria-label={ariaLabel}
           className={cn(
-            // Matches .btn from utility-patterns.css + mosaic date-select.tsx
+            // Matches .btn from utility-patterns.css + mindtris-ui date-select.tsx
             'font-medium text-sm inline-flex items-center justify-between border rounded-lg leading-5 transition-colors',
             'px-3.5 py-2.5',
             fullWidth ? 'w-full' : 'w-auto min-w-[8rem]',

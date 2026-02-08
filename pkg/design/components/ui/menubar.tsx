@@ -54,11 +54,11 @@ export type MenubarSubContentProps = React.ComponentProps<
 >
 
 const Menubar = MenubarPrimitive.Root
-const MenubarMenu = MenubarPrimitive.Menu
-const MenubarTrigger = MenubarPrimitive.Trigger
-const MenubarGroup = MenubarPrimitive.Group
-const MenubarPortal = MenubarPrimitive.Portal
-const MenubarRadioGroup = MenubarPrimitive.RadioGroup
+const MenubarMenu: React.ComponentType<MenubarMenuProps> = MenubarPrimitive.Menu
+const MenubarTrigger: React.ComponentType<MenubarTriggerProps> = MenubarPrimitive.Trigger
+const MenubarGroup: React.ComponentType<MenubarGroupProps> = MenubarPrimitive.Group
+const MenubarPortal: React.ComponentType<MenubarPortalProps> = MenubarPrimitive.Portal
+const MenubarRadioGroup: React.ComponentType<MenubarRadioGroupProps> = MenubarPrimitive.RadioGroup
 
 function MenubarContent({
   className,

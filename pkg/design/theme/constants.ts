@@ -26,7 +26,7 @@ export const baseColors: BrandColor[] = [
   { name: "Muted Foreground", cssVar: "--muted-foreground" },
 ]
 
-/** Color groups for tweakcn-style sidebar. Vars match Mindtris Mosaic presets in presets.ts. */
+/** Color groups for tweakcn-style sidebar. Vars match Mindtris UI presets in presets.ts. */
 export const colorGroups: ColorGroup[] = [
   { title: "Primary Colors", colors: [{ name: "Primary", cssVar: "--primary" }, { name: "Primary Foreground", cssVar: "--primary-foreground" }] },
   { title: "Secondary Colors", colors: [{ name: "Secondary", cssVar: "--secondary" }, { name: "Secondary Foreground", cssVar: "--secondary-foreground" }] },

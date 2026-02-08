@@ -232,7 +232,7 @@ import {
   NavigationMenuLink,
   NavigationMenuViewport,
   cn,
-} from '@mindtris/design-system'
+} from '@mindtris/ui'
 import { useForm } from 'react-hook-form'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts'
 import { Settings, Check, ChevronRight, Info, ChevronDown, Search, Eye, EyeOff, HelpCircle, Moon, TriangleAlert, UserRound, Plus, Minus, MoreHorizontal, Calendar, AudioLines, Save, BookmarkPlus, LogOut, Bell, CreditCard, Shield, Trash2, Tag, MessageSquareText, Mail, Mailbox, Copy, Loader2, RotateCcw, CircleCheck, Star, Binoculars, Grip, Code2, GitBranch, Users, Plug, Headphones, Building2, Workflow, UserRoundPlus, ShipWheel, BarChart2, Inbox, Cookie, Gift, Link2, QrCode, Expand, Download, LayoutDashboard, FileText, PanelLeftClose, Home, CircleGauge, FolderKanban } from 'lucide-react'
@@ -6218,7 +6218,7 @@ function TextareaShowcase() {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Rich text</h3>
             <div className="text-sm text-muted-foreground mb-3">
-              Tiptap-based editor with <span className="text-foreground font-medium">bold</span>, <span className="text-foreground font-medium">italic</span>, <span className="text-foreground font-medium">strike</span>, lists, and optional attach and emoji buttons. Styled with mindtris-design tokens.
+              Tiptap-based editor with <span className="text-foreground font-medium">bold</span>, <span className="text-foreground font-medium">italic</span>, <span className="text-foreground font-medium">strike</span>, lists, and optional attach and emoji buttons. Styled with mindtris-ui tokens.
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
               <div className="max-w-[520px] mx-auto flex flex-col gap-3">

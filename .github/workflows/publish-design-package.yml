@@ -1,4 +1,4 @@
-name: Publish @mindtris-design
+name: Publish @mindtris/ui
 
 on:
   push:

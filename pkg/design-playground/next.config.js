@@ -5,7 +5,7 @@ const nextConfig = {
   // `next/image` requires a server; disable optimization for static hosting.
   images: { unoptimized: true },
   // Workspace package ships TS/TSX source; ensure Next transpiles it.
-  transpilePackages: ['@mindtris/design-system'],
+  transpilePackages: ['@mindtris/ui'],
 }
 
 module.exports = nextConfig

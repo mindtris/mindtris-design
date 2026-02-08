@@ -18,7 +18,7 @@ interface ThemeTabProps {
   setSelectedRadius: (radius: string) => void
   setImportedTheme: (theme: ImportedTheme | null) => void
   onImportClick: () => void
-  /** When set, render only colors section (Mindtris Mosaic) or only others (Radius, Mode, Import). */
+  /** When set, render only colors section (Mindtris UI) or only others (Radius, Mode, Import). */
   variant?: ThemeTabVariant
   /** When true (e.g. preset in sidebar header), don't render preset selector. */
   hidePreset?: boolean
@@ -77,9 +77,9 @@ export function ThemeTab({
     >
       {showPreset && (
         <>
-          {/* Mindtris Mosaic — preset selector (no "Mindtris Theme Presets" label) */}
+          {/* Mindtris UI — preset selector (no "Mindtris Theme Presets" label) */}
           <div className="space-y-3">
-            <label className="text-sm font-medium">Mindtris Mosaic</label>
+            <label className="text-sm font-medium">Mindtris UI</label>
             <Select
               value={selectedTheme}
               onChange={(e) => handleThemeSelect(e.target.value)}

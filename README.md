@@ -2,9 +2,9 @@
   <img src="pkg/design/assets/logos/mindtris-logo.svg" alt="Mindtris" height="64" />
 </p>
 
-## Mindtris Design
+## Mindtris UI
 
-This repository is the single source of truth for Mindtris UI: tokens, themes, and reusable React components published as `@mindtris/design-system`.
+This repository (**mindtris-ui**) is the single source of truth for Mindtris UI: tokens, themes, and reusable React components published as `@mindtris/ui` on [npm](https://www.npmjs.com/package/@mindtris/ui).
 
 ### Quick links
 
@@ -17,46 +17,20 @@ This repository is the single source of truth for Mindtris UI: tokens, themes, a
 - `pkg/design/theme`: theme engine for applying presets and imported themes at runtime
 - `pkg/design/components`: UI primitives and composable building blocks
 - `pkg/design/components/theme-customizer`: Theme Customizer UI (create/import themes)
-- `pkg/design-playground`: local Next.js playground app that consumes `@mindtris/design-system`
+- `pkg/design-playground`: local Next.js playground app that consumes `@mindtris/ui`
 - `references`: reference material and experiments (not published)
 
 ## Packages
 
-- `@mindtris/design-system` (published): `pkg/design`
+- `@mindtris/ui` (published): `pkg/design`
 - `@mindtris/design-playground` (workspace app): `pkg/design-playground`
 
-## Install in consumer apps (GitHub Packages)
+## Install in consumer apps (npm)
 
-`@mindtris/design-system` publishes to GitHub Packages. You must authenticate to install.
-
-1) Add a project `.npmrc`:
-
-```ini
-@mindtris:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-```
-
-2) Provide a GitHub Personal Access Token:
-
-- Required scopes: `read:packages` (and `repo` if the package is private)
-- Environment variable: `NODE_AUTH_TOKEN`
-
-PowerShell:
-
-```powershell
-$env:NODE_AUTH_TOKEN="YOUR_TOKEN"
-```
-
-bash/zsh:
+`@mindtris/ui` is published to npm.
 
 ```bash
-export NODE_AUTH_TOKEN="YOUR_TOKEN"
-```
-
-3) Install:
-
-```bash
-pnpm add @mindtris/design-system
+pnpm add @mindtris/ui
 ```
 
 ## Use tokens (required)
@@ -64,7 +38,7 @@ pnpm add @mindtris/design-system
 Import the token entrypoint once in your app’s root CSS:
 
 ```css
-@import '@mindtris/design-system/tokens';
+@import '@mindtris/ui/tokens';
 ```
 
 Use semantic utilities and variables (no component-level hex colors):
@@ -77,7 +51,7 @@ Use semantic utilities and variables (no component-level hex colors):
 ## Use components
 
 ```tsx
-import { Button, Card, CardContent, Input } from '@mindtris/design-system'
+import { Button, Card, CardContent, Input } from '@mindtris/ui'
 
 export function Example() {
   return (
@@ -100,11 +74,11 @@ Themes are applied by setting token variables on the root element (typically `do
 - Radius and layout overrides
 
 ```tsx
-import { applyThemePreset, useThemeManager } from '@mindtris/design-system'
+import { applyThemePreset, useThemeManager } from '@mindtris/ui'
 
 export function ThemeBootstrap() {
   const { isDarkMode } = useThemeManager()
-  applyThemePreset('mosaic', isDarkMode)
+  applyThemePreset('mindtris-ui', isDarkMode)
   return null
 }
 ```
@@ -112,7 +86,7 @@ export function ThemeBootstrap() {
 For interactive theme editing and imports:
 
 ```tsx
-import { ThemeCustomizer } from '@mindtris/design-system'
+import { ThemeCustomizer } from '@mindtris/ui'
 
 export function ThemeSettings() {
   return <ThemeCustomizer />

@@ -1,12 +1,12 @@
 # Mindtris-Design-System
-A lightweight, opinionated design system for fast product & marketing teams. **Inspired by Deel** clean, confident, professional SaaS aesthetic with optimistic colors, strong hierarchy, trustworthy feel, and modern simplicity using Cruip and Shadcn systems.
+A lightweight, opinionated design system for fast product & marketing teams. **Inspired by Deel** clean, confident, professional SaaS aesthetic with optimistic colors, strong hierarchy, trustworthy feel, and modern simplicity using Mindtris UI and Shadcn systems.
 
 ### Philosophy
 - **Tokens-first** — everything (colors, typography, spacing, radius, shadows) lives in CSS variables → change the look instantly without touching component code.
 - **Modular & instantly adaptable** — swap themes, fonts, or entire styles in seconds by updating `:root` variables or class-based themes.
 - **Tailwind-native** + dark mode built-in.
 - **Not** a massive library — focused on useful low-level UI + high-value marketing blocks.
-- Reuse/adapt Cruip-style layouts easily by overriding tokens to match Deel direction.
+- Reuse/adapt mindtris-ui-style layouts easily by overriding tokens to match Deel direction.
 
 ### Core Features
 - **Tokens-first**: colors, typography, spacing, radius, shadows via CSS variables
@@ -19,8 +19,8 @@ A lightweight, opinionated design system for fast product & marketing teams. **I
 - Low bundle size — no heavy component bloat
 
 ### Theme naming
-- Use **mindtris-** prefixed theme names only (e.g. `mindtris-mosaic`, `mindtris-default`, `mindtris-dark`, `mindtris-minimal`). Do not use other product names (Deel, Vercel, Linear, Cruip) as theme identifiers.
-- **Base theme**: The default is the current **Cruip Mosaic** look (existing template); we name it e.g. `mindtris-mosaic`.
+- Use **mindtris-** prefixed theme names only (e.g. `mindtris-ui`, `mindtris-default`, `mindtris-dark`, `mindtris-minimal`). Do not use other product names (Deel, Vercel, Linear) as theme identifiers.
+- **Base theme**: The default is the current **mindtris-ui** look (existing template); we name it e.g. `mindtris-ui`.
 
 ### Quick Theme / Style Switching (The Power of Tokens)
 Change the **entire visual language** in one place — no component rewrites needed.
@@ -28,7 +28,7 @@ Change the **entire visual language** in one place — no component rewrites nee
 Example: Switch between mindtris presets instantly:
 
 ```css
-/* themes/mindtris-mosaic.css — base = current Cruip Mosaic */
+/* themes/mindtris-ui.css — base = current mindtris-ui */
 :root {
   --primary-hsl: 239 68% 55%;
   --accent-hsl: 48 100% 67%;
@@ -45,7 +45,7 @@ Example: Switch between mindtris presets instantly:
 }
 
 ```bash
-mindtris-design-system/
+mindtris-ui/
 ├── tokens/
 │   ├── base/                    # Core, non-theme-specific defaults (semantic + primitives)
 │   │   ├── colors.css           # Semantic: --primary, --accent, --success, --muted, --bg, etc. (hsl vars preferred for easy theming)
@@ -55,11 +55,11 @@ mindtris-design-system/
 │   │   ├── shadows.css          # --shadow-sm, --shadow-md (card elevation), --shadow-lg, --shadow-glass (subtle)
 │   │   └── gradients.css        # Optional: --gradient-hero (yellow → blue → purple vibe)
 │   ├── themes/                  # All names: mindtris-* (no other product names)
-│   │   ├── mindtris-mosaic.css  # Base = current Cruip Mosaic (default template look)
+│   │   ├── mindtris-ui.css      # Base = current mindtris-ui (default template look)
 │   │   ├── mindtris-dark.css    # Dark mode layer (combine with any theme)
 │   │   ├── mindtris-minimal.css # Example alternate preset
 │   │   └── mindtris-*.css       # Further presets as needed
-│   └── index.css                # @import base/* + default theme (mindtris-mosaic); :root + .dark
+│   └── index.css                # @import base/* + default theme (mindtris-ui); :root + .dark
 ├── components/
 │   ├── ui/                      # Atomic/low-level (Shadcn-style, highly reusable)
 │   │   ├── Button.tsx           # variants: primary (strong Deel blue-purple), accent (yellow), outline, ghost, etc.
@@ -103,7 +103,7 @@ Production-Ready Plan and Theme Customizer Execution
 ## OBJECTIVE
 
 Deliver a stable `ui/` layer for app code, preserve existing `components/`
-as the Cruip base, and implement a theme customizer with live token editing
+as the mindtris-ui base, and implement a theme customizer with live token editing
 and presets.
 
 ---
@@ -115,7 +115,7 @@ and presets.
 │ ├── css/
 │ │ ├── globals.css
 │ │ └── (themes.css to add)
-├── components/ # Existing Cruip template components
+├── components/ # Existing mindtris-ui template components
 ├── contexts/
 ├── hooks/
 ├── lib/
@@ -131,7 +131,7 @@ and presets.
 │ ├── css/
 │ │ ├── globals.css
 │ │ └── themes.css
-├── components/ # Cruip base (existing)
+├── components/ # mindtris-ui base (existing)
 ├── ui/
 │ ├── components/
 │ │ ├── Button.tsx
@@ -164,10 +164,10 @@ RULE:
 ## POLICY: COMPONENTS/ LIFECYCLE
 
 - Do not delete `components/` during migration.
-- Keep it as the Cruip base until all `app/` imports move to `ui/*`.
+- Keep it as the mindtris-ui base until all `app/` imports move to `ui/*`.
 - Only remove or archive `components/` after shadcn (or another system)
   fully replaces the wrapper internals and no runtime usage remains.
-- If we want to keep history, move it to `cruip-legacy/` instead of deleting.
+- If we want to keep history, move it to `mindtris-ui-legacy/` instead of deleting.
 
 ---
 
@@ -214,7 +214,7 @@ mkdir -p ui/components ui/layout ui/theme ui/tokens
 
 ### STEP 2: WRAP CORE PRIMITIVES
 
-Goal: create wrappers that hide Cruip details.
+Goal: create wrappers that hide mindtris-ui implementation details.
 
 Create these wrappers (thin, stable APIs):
 

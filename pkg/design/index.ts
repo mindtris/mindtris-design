@@ -76,7 +76,7 @@ export type {
 export { createStandardProps } from './lib/component-api-patterns'
 
 // Contexts (root-level re-export for reliable resolution from consumers' node_modules)
-export { AppProvider, useAppProvider } from './app-provider-primitives.tsx'
+export { AppProvider, useAppProvider } from './app-provider-primitives'
 
 // Hooks
 export {
@@ -126,8 +126,8 @@ export type {
 } from './theme/types'
 
 // Phase B: ThemeCustomizer (root-level re-export for reliable resolution from consumers' node_modules)
-export { ThemeCustomizer, ThemeTab, LayoutTab, ImportModal, ColorsPanel, ColorInput, TypographyPanel, OtherPanel } from './theme-customizer-primitives.tsx'
-export type { ThemeCustomizerSection } from './theme-customizer-primitives.tsx'
+export { ThemeCustomizer, ThemeTab, LayoutTab, ImportModal, ColorsPanel, ColorInput, TypographyPanel, OtherPanel } from './theme-customizer-primitives'
+export type { ThemeCustomizerSection } from './theme-customizer-primitives'
 
 // Phase C: design-system UI components (root-level re-export for reliable resolution from consumers' node_modules)
 export {
@@ -407,7 +407,7 @@ export {
   Icon,
   createIcon,
   DropdownProfile,
-} from './ui-primitives.ts'
+} from './ui-primitives'
 export type {
   AccordionGroupProps,
   AccordionGroupItem,
@@ -646,7 +646,7 @@ export type {
   DatePickerProps,
   DatePickerRangeProps,
   ChartConfig,
-} from './ui-primitives.ts'
+} from './ui-primitives'
 
 // Icon constants
 export {
@@ -660,5 +660,8 @@ export type { IconSize } from './lib/icon-constants'
 // to avoid "Can't resolve ./components/sections/header". Use built package or import from '@mindtris/design-system/sections' when that entry exists.
 
 // Phase C: design-system layouts (root-level re-export for reliable resolution from consumers' node_modules)
-export { Container, Page, Section, Grid, Stack } from './layout-primitives.tsx'
-export type { ContainerProps, PageProps, SectionProps, GridProps, StackProps } from './layout-primitives.tsx'
+export { Container, Page, Section, Grid, Stack } from './layout-primitives'
+export type { ContainerProps, PageProps, SectionProps, GridProps, StackProps } from './layout-primitives'
+
+// Blocks (header, footer)
+export * from './blocks'

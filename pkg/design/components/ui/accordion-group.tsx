@@ -9,7 +9,7 @@
  *   - `type="single"`: `value?: string|null` / `defaultValue?: string|null`
  *   - `type="multiple"`: `value?: string[]` / `defaultValue?: string[]`
  *
- * Reference (Mosaic) variants we mirror in Mindtris docs:
+ * Reference (Mindtris UI) variants we mirror in Mindtris docs:
  * - Basic (single item)
  * - Table row accordion
  * - Rich table row accordion

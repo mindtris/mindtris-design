@@ -8,7 +8,7 @@ import {
   Button,
   colorThemes,
   useThemeManager,
-} from '@mindtris/design-system'
+} from '@mindtris/ui'
 
 type SidebarConfig = {
   variant: 'sidebar' | 'floating' | 'inset'

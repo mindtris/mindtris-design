@@ -5,7 +5,7 @@ import React from 'react'
 import {
   Button,
   Input,
-} from '@mindtris/design-system'
+} from '@mindtris/ui'
 
 export function ThemePage() {
   return (

@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import React, { Suspense } from 'react'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
-import { AppProvider } from '@mindtris/design-system'
+import { AppProvider } from '@mindtris/ui'
 import PlaygroundShell from './playground-shell'
 import PlaygroundToaster from './playground-toaster'
 
